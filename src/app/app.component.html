@@ -1,0 +1,37 @@
+<div>
+  <header>
+    <nav>
+      <div class="div_titulo">
+        <h1>Placar de Boliche</h1>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <div class="titulo2">
+      <h3>Pinos Derrubados:</h3>
+    </div>
+    <form (ngSubmit)="throwPins()" class="form" novalidate>
+      <input class="input" name="pins" [(ngModel)]="pins" type="number" min="0" max="10">
+      <button class="button" name="btnScore"  type="submit">Enviar</button>
+      <button class="buttonReset" name="btnLimpar" (click)="reset()" type="reset">Reset</button>
+    </form>
+  </div>
+  <div class="div_geral">
+    <div class="titulos">
+      <div class="titulo">Pinos Derrubados</div>
+      <div class="titulo">Pontos</div>
+      <div class="titulo">Frames</div>
+    </div>
+    <ng-template ngFor let-frame [ngForOf]="score.getFrames()">
+      <div class="frame">
+        <div class="number">{{frame.number}}</div>
+        <div>
+          <div class="throw first">{{frame.firstThrow}}</div>
+          <div class="throw second">{{frame.secondThrow}}</div>
+          <div class="throw third" *ngIf="isTeenth(frame)">{{frame.thirdThrow}}</div>
+        </div>
+        <div class="totalPoints total">{{frame.totalPoints}}</div>
+      </div>
+    </ng-template>
+  </div>
+</div>
