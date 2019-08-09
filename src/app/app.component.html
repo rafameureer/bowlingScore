@@ -12,7 +12,7 @@
     </div>
     <form (ngSubmit)="throwPins()" class="form" novalidate>
       <input class="input" name="pins" [(ngModel)]="pins" type="number" min="0" max="10">
-      <button class="button" name="btnScore"  type="submit">Enviar</button>
+      <button class="button" name="btnScore" type="submit">Enviar</button>
       <button class="buttonReset" name="btnLimpar" (click)="reset()" type="reset">Reset</button>
     </form>
   </div>
