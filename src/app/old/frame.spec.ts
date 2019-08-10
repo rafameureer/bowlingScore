@@ -172,7 +172,7 @@ describe('Frame', () => {
 			expect(frame.totalPoints).toBe(60);
 		});
 	});
-   describe('Após dois spare', () => {
+ describe('Após dois spare', () => {
 		let firstFrame: Frame;
 		let secondFrame: Frame;
 		beforeEach(() => {
