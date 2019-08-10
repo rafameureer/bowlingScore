@@ -36,7 +36,6 @@ export class AppComponent {
 	}
 
 	public reset() {
-		console.log('reset');
 		this.score = new BowlingScore();
 		this.pins = '';
 	}

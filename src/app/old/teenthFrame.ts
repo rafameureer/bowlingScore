@@ -5,11 +5,10 @@ export class TeenthFrame extends Frame {
 	public thirdThrow: string;
 	public thirdThrowPinsKnocked: number;
 
-
-
 	constructor() {
 		super();
 	}
+
 	public setFirstThrow(totalPoints: number, pinsKnocked: number) {
 		super.setFirstThrow(totalPoints, pinsKnocked);
 		if (totalPoints !== undefined && pinsKnocked !== undefined) { this.throwNumber++; }
